@@ -3,7 +3,7 @@
 
     </head>
     <body>
-        
+        <a href="/show_all" class="onright">Go Back</a>
         <h1>TV Show {{ id }}</h1>
         <p>Title {{ title }}</p>
         <p>Network {{ network }} </p>
@@ -12,5 +12,5 @@
         <br>
         <p>Last Updated: {{last_updated}}</p>
     </body>
-    <a href="/edit">Edit</a>|<a href="/delete">Delete</a>
+    <a href="/edit/{{ id }}">Edit</a>|<a href="/delete">Delete</a>
 </html>

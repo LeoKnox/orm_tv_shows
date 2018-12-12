@@ -12,7 +12,7 @@
     <body>
         <a href="/show_all" class="onright">Go Back</a>
         <h1>Add a new show</h1>
-        <form action="/redisplay" method="post">
+        <form action="/redisplay/{{ id }}" method="post">
         {% csrf_token %}
         <p>Title</p>
         <input type="text" name="title" value="{{ title }}">
@@ -28,7 +28,7 @@
         </div>
         <p>Description</p>
         <input type="textfield" name="description" value="{{ description }}"><br>
-        <input type="submit" value="create">
+        <input type="submit" value="update">
         </form>
     </body>
 </html>
