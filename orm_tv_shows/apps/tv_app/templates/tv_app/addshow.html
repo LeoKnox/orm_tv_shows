@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <style>
+            .duo {
+                display:inline-block;
+            }
+            .onright {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/show_all" class="onright">Go Back</a>
+        <h1>Add a new show</h1>
+        <form action="/display" method="post">
+        {% csrf_token %}
+        <p>Title</p>
+        <input type="text" name="title">
+        <div>
+            <div class="duo">
+                <p>Network</p>
+                <input type="text" name="network">
+            </div>
+            <div class="duo">
+                <p>Release Date</p>
+                <input type="date" name="release_date">
+            </div>
+        </div>
+        <p>Description</p>
+        <input type="textfield" name="description"><br>
+        <input type="submit" value="create">
+        </form>
+    </body>
+</html>
